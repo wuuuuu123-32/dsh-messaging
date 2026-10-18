@@ -1,0 +1,28 @@
+{
+  "name": "dsh-messaging",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness 消息标记：行内按钮、会话标识和右下角总览面板。",
+  "keywords": ["deepseek-harness", "dsh", "dsh-plugin", "bookmarks", "messaging"],
+  "homepage": "https://github.com/wuuuuu123-32/dsh-messaging#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuuuuu123-32/dsh-messaging.git"
+  },
+  "bugs": { "url": "https://github.com/wuuuuu123-32/dsh-messaging/issues" },
+  "author": "wuuuuu123-32",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": ["lib/", "test/", "README.md", "REPORT.md", "cordis.patch.yml"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "platform": "web" }
+  },
+  "engines": { "node": ">=20" },
+  "scripts": { "test": "node test/model.mjs && node test/client.mjs" }
+}
